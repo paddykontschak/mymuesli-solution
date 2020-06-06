@@ -7,6 +7,57 @@
     <title>Solution</title>
 </head>
 <body>
+    <header>
+        <h1>Browse Site</h1>
+        <p>Select a tab</p>
+    </header>
+    <div class="tabbed">
+        <ul role="tablist">
+            <li role="presentation">
+                <a
+                    id="topics"
+                    role="tab"
+                    href="#section-topics"
+                    aria-selected="true"
+                >
+                    Topics
+                </a>
+            </li>
+            <li>
+                <a
+                    id="archives"
+                    role="tab"
+                    href="#section-archives"
+                >
+                    Archives
+                </a>
+            </li>
+            <li>
+                <a
+                    id="pages"
+                    role="tab"
+                    href="#section-pages"
+                >
+                    Pages
+                </a>
+            </li>
+        </ul>
+        <section
+            id="section-topics"
+            role="tabpanel"
+            aria-labelledby="topics"
+        ></section>
+        <section
+            id="section-archives"
+            role="tabpanel"
+            aria-labelledby="archives"
+        ></section>
+        <section
+            id="section-pages"
+            role="tabpanel"
+            aria-labelledby="pages"
+        ></section>
+    </div>
     <script src="./js/app.js"></script>
 </body>
 </html>
