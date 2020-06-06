@@ -1,0 +1,83 @@
+{
+    "topics": [
+        {
+            "ID": 1,
+            "title": "HTML Techniques"
+        },
+        {
+            "ID": 2,
+            "title": "CSS Styling"
+        },
+        {
+            "ID": 3,
+            "title": "Flash Tutorials"
+        },
+        {
+            "ID": 4,
+            "title": "Web Miscellanea"
+        },
+        {
+            "ID": 5,
+            "title": "Site News"
+        },
+        {
+            "ID": 6,
+            "title": "Web Development"
+        }
+    ],
+    "posts": [
+        {
+            "ID": 1,
+            "type": "post",
+            "author": "James",
+            "date": "2020-06-05 12:00:00",
+            "title": "Some Title",
+            "excerpt": "",
+            "thumbnail": "",
+            "content": "",
+            "slug": "",
+            "url": "",
+            "topics": [1, 4, 6],
+            "status": "published"
+        }, {
+            "ID": 2,
+            "type": "post",
+            "author": "James",
+            "date": "2020-06-05 12:00:00",
+            "title": "Some Title",
+            "excerpt": "",
+            "thumbnail": "",
+            "content": "",
+            "slug": "",
+            "url": "",
+            "topics": [2, 6],
+            "status": "published"
+        }, {
+            "ID": 3,
+            "type": "post",
+            "author": "James",
+            "date": "2020-06-05 12:00:00",
+            "title": "Some Title",
+            "excerpt": "",
+            "thumbnail": "",
+            "content": "",
+            "slug": "",
+            "url": "",
+            "topics": [2, 6],
+            "status": "archived"
+        }, {
+            "ID": 4,
+            "type": "page",
+            "author": "James",
+            "date": "2020-06-05 12:00:00",
+            "title": "Some Title",
+            "excerpt": "",
+            "thumbnail": "",
+            "content": "",
+            "slug": "",
+            "url": "",
+            "topics": [2, 6],
+            "status": "published"
+        }
+    ]
+}
