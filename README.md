@@ -10,6 +10,10 @@ $ php -S 127.0.0.1:8000
 $ yarn dev
 ```
 
+## Preview
+
+![](./img/template.png)
+
 ## To Do List
 
 * [x] Create a PHP file to work as an ”API” exporting a JSON construct holding the information to build this task and call it with Javascript
@@ -33,7 +37,8 @@ $ yarn dev
 * [x] please do not use bootstrap or any other CSS framework
 * [x] A plus would be to use a modern frontend workflow (ex. Grunt, Gulp, Webpack, …). However please bear in mind these are optional tasks just provide us with further visibility of your technical skills. They are not a must.
 
-## Sources
+<details><summary><b>Sources</b></summary>
+<p>
 
 - `readable_random_string()` for dummy API content
   - https://gist.github.com/sepehr/3371339
@@ -42,3 +47,6 @@ $ yarn dev
   - https://css-tricks.com/tabs-its-complicated/
 - Count up numbers from 0 to x
   - https://stackoverflow.com/a/16994725
+
+</p>
+</details>
