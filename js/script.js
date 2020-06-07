@@ -1,6 +1,6 @@
-import { tablist, tabs, panels, selectedTabIndex } from './global.js'
-import getSites from './sites.js'
-import switchTab from './tabs.js'
+import { tablist, tabs, panels, selectedTabIndex } from './modules/global.js'
+import getSites from './modules/sites.js'
+import switchTab from './modules/tabs.js'
 
 getSites()
 
