@@ -28,14 +28,19 @@ const getSites = async () => {
     `)
     posts.map(post => archivesMarkup += post.status === 'archived' ? `
         <article>
-            <img src="./img/${post.thumbnail}" />
+            <img src="${post.thumbnail}" />
             <p>${post.excerpt}</p>
         </article>
     ` : '')
     posts.map(post => pagesMarkup += post.type === 'page' && post.status === 'published' ? `
-        <article>
-            <h3>${post.title}</h3>
-            <p>${post.excerpt}</p>
+        <article style="background-image: url(${post.thumbnail})">
+            <div>
+                <h3>
+                    <i class="far ${post.icon}"></i>
+                    ${post.title}
+                </h3>
+                <p>${post.excerpt}</p>
+            </div>
         </article>
     ` : '')
 

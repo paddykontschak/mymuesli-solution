@@ -35,6 +35,7 @@
 
     $topics = ["HTML Techniques", "CSS Styling", "Flash Tutorials", "Web Miscellanea", "Site News", "Web Development"];
     $authors = ["James", "Judy", "Peter", "Susan", "Timothy", "Darlene", "Willy", "Sandra"];
+    $icons = ["fa-envelope", "fa-edit", "fa-bookmark", "fa-file", "fa-folder-open", "fa-newspaper", "fa-paper-plane", "fa-sticky-note", "fa-keyboard", "fa-file", "fa-folder"];
     $status = ["published", "published", "published", "archived"];
     $types = ["post", "post", "post", "page"];
 
@@ -54,6 +55,7 @@
         $type = $types[array_rand($types)];
         $first_topic = array_rand($topics) + 1;
         $second_topic = array_rand($topics) + 1;
+        $thumbnail = "https://picsum.photos/seed/" . readable_random_string() . "/600/300";
         $selectedTopics = [];
 
         while ($second_topic === $first_topic) {
@@ -71,10 +73,11 @@
             "date" => date("Y-m-d H:i:s", mt_rand(1, time())),
             "title" => readable_random_string(),
             "excerpt" => readable_random_sentence(),
-            "thumbnail" => "placeholder.png",
+            "thumbnail" => $thumbnail,
             "content" => readable_random_sentence(25),
             "slug" => "",
             "url" => "",
+            "icon" => $icons[array_rand($icons)],
             "topics" => $selectedTopics,
             "status" => $status[array_rand($status)]
         );
