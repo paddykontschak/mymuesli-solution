@@ -1,0 +1,31 @@
+header {
+    align-items: center;
+
+    p {
+        text-transform: uppercase;
+    }
+
+    + .tabbed {
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 684px) {
+        display: flex;
+
+        h1 {
+            + p {
+                margin-left: 1.5rem;
+            }
+        }
+
+        @supports(gap: none) {
+            gap: 1.5rem;
+
+            h1 {
+                + p {
+                    margin-left: none;
+                }
+            }
+        }
+    }
+}
