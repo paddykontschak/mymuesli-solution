@@ -7,6 +7,8 @@ const getSites = async () => {
     const topics = json.topics
     const posts = json.posts
     let topicsMarkup = ""
+    let archivesMarkup = ""
+    let pagesMarkup = ""
 
     posts.map(post => {
         post.topics.map(topicId => {
@@ -18,9 +20,28 @@ const getSites = async () => {
         })
     })
 
-    topics.map(topic => topicsMarkup += `<p>${topic.title} <span>${topic.posts} ${topic.posts === 1 ? `post` : `posts`}</span></p>`)
+    topics.map(topic => topicsMarkup += `
+        <article>
+            <h3>${topic.title}</h3>
+            <p>${topic.posts} ${topic.posts === 1 ? `post` : `posts`}</p>
+        </article>
+    `)
+    posts.map(post => archivesMarkup += post.status === 'archived' ? `
+        <article>
+            <img src="./img/${post.thumbnail}" />
+            <p>${post.excerpt}</p>
+        </article>
+    ` : '')
+    posts.map(post => pagesMarkup += post.type === 'page' && post.status === 'published' ? `
+        <article>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+        </article>
+    ` : '')
 
     tabbed.querySelector('#section-topics').innerHTML = topicsMarkup
+    tabbed.querySelector('#section-archives').innerHTML = archivesMarkup
+    tabbed.querySelector('#section-pages').innerHTML = pagesMarkup
 }
 
 getSites()

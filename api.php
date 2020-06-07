@@ -1,15 +1,8 @@
 <?php
     /**
-     * Generates human-readable string.
-     *
-     * @param string $length Desired length of random string.
-     * 
-     * retuen string Random string.
-     * 
      * source: https://gist.github.com/sepehr/3371339
      */ 
-    function readable_random_string($length = 6)
-    {  
+    function readable_random_string($length = 6) {  
         $string     = '';
         $vowels     = array("a","e","i","o","u");  
         $consonants = array(
@@ -30,10 +23,20 @@
         return $string;
     }
 
+    function readable_random_sentence($length = 10) {
+        $string = '';
+
+        for ($i=0; $i < $length; $i++) {
+            $string .= readable_random_string() . " ";
+        }
+
+        return trim($string);
+    }
+
     $topics = ["HTML Techniques", "CSS Styling", "Flash Tutorials", "Web Miscellanea", "Site News", "Web Development"];
     $authors = ["James", "Judy", "Peter", "Susan", "Timothy", "Darlene", "Willy", "Sandra"];
-    $status = ["published", "archived"];
-    $types = ["post", "page"];
+    $status = ["published", "published", "published", "archived"];
+    $types = ["post", "post", "post", "page"];
 
     $return_arr = array(
         "topics" => [],
@@ -67,9 +70,9 @@
             "author" => $authors[array_rand($authors)],
             "date" => date("Y-m-d H:i:s", mt_rand(1, time())),
             "title" => readable_random_string(),
-            "excerpt" => "",
-            "thumbnail" => "",
-            "content" => "",
+            "excerpt" => readable_random_sentence(),
+            "thumbnail" => "placeholder.png",
+            "content" => readable_random_sentence(25),
             "slug" => "",
             "url" => "",
             "topics" => $selectedTopics,
