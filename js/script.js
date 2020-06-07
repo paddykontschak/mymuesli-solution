@@ -24,19 +24,32 @@ const getSites = async () => {
     })
 
     topics.map(topic => topicsMarkup += `
-        <article>
+        <article
+            id="${topic.slug}"
+            role="contentinfo"
+            aria-label="topic"
+        >
             <h3>${topic.title}</h3>
             <p>${topic.posts} ${topic.posts === 1 ? `post` : `posts`}</p>
         </article>
     `)
     posts.map(post => archivesMarkup += post.status === 'archived' ? `
-        <article>
+        <article
+            id="${post.slug}"
+            role="contentinfo"
+            aria-label="archive"
+        >
             <img src="${post.thumbnail}" />
             <p>${post.excerpt}</p>
         </article>
     ` : '')
     posts.map(post => pagesMarkup += post.type === 'page' && post.status === 'published' ? `
-        <article style="background-image: url(${post.thumbnail})">
+        <article
+            id="${post.slug}"
+            role="contentinfo"
+            aria-label="page"
+            style="background-image: url(${post.thumbnail})"
+        >
             <div>
                 <h3>
                     <i class="far ${post.icon}"></i>
