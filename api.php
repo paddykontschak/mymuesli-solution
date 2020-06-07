@@ -1,7 +1,4 @@
 <?php
-    /**
-     * source: https://gist.github.com/sepehr/3371339
-     */ 
     function readable_random_string($length = 6) {  
         $string     = '';
         $vowels     = array("a","e","i","o","u");  
@@ -74,7 +71,7 @@
             "title"     => $title,
             "excerpt"   => readable_random_sentence(),
             "thumbnail" => $thumbnail,
-            "content"   => readable_random_sentence(25),
+            "content"   => readable_random_sentence(35),
             "slug"      => strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $title))),
             "url"       => "",
             "icon"      => $icons[array_rand($icons)],
