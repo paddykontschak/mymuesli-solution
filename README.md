@@ -21,6 +21,6 @@
 - `readable_random_string()` for dummy API content
   - https://gist.github.com/sepehr/3371339
 - Basic tab script as base to work with
-  - https://codepen.io/heydon/pen/veeaEa
+  - https://codepen.io/heydon/pen/veeaEa | https://css-tricks.com/tabs-its-complicated/
 - Count up numbers from 0 to x
   - https://stackoverflow.com/a/16994725
