@@ -104,6 +104,10 @@ header {
         background-position: center;
         background-repeat: no-repeat;
 
+        &:last-child {
+            margin-bottom: 0;
+        }
+
         div {
             display: grid;
             color: #fff;
