@@ -1,4 +1,4 @@
-export const apiUrl           = 'http://localhost:8000/api.php'
+export const apiUrl           = 'http://127.0.0.1:8000/api.php'
 export const tabbed           = document.querySelector('.tabbed')
 export const tablist          = tabbed.querySelector('ul')
 export const tabs             = tablist.querySelectorAll('a')

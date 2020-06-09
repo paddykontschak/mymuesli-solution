@@ -1,4 +1,5 @@
-import { apiUrl, tabbed, selectedTabIndex } from './global.js'
+import { apiUrl, tabbed, selectedTabIndex, setCounted } from './global.js'
+import counter from './counter.js'
 
 const getSites = async () => {
     const response     = await fetch(apiUrl)

@@ -1,5 +1,5 @@
 import { tabbed, counted } from './global.js'
-import animateValue from './animate'
+import animateValue from './animate.js'
 
 const counter = () => {
     const counter = [...tabbed.querySelectorAll('.post-count')]
